@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "codeact"
+version = "0.1.0"
+description = "CodeAct: An agent framework for code execution and reasoning"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "codeact", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.6"
+mypy = "^1.7.1"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.scripts]
+codeact = "codeact.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "N", "W", "B", "UP", "PL", "RUF"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+python_classes = "Test*"
