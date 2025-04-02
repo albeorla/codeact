@@ -1,6 +1,6 @@
 # CodeAct
 
-A framework for code execution and reasoning agents following SOLID principles and design patterns.
+A framework for code execution and reasoning agents following SOLID principles and design patterns. Inspired by the paper ["Executable Code Actions Elicit Better LLM Agents"](https://arxiv.org/abs/2402.01030) (Wang et al., 2024).
 
 ## Features
 
