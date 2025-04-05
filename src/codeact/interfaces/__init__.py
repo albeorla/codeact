@@ -1,15 +1,19 @@
-"""Protocol interfaces for the CodeAct framework."""
+"""Interface exports for CodeAct."""
 
-from .agent import AgentHistoryEntry, IAgentState
-from .execution import ExecutionResult, IExecutionEnvironment
-from .llm import ILLMOutputParser, ILLMProvider, ParsedLLMOutput
+from codeact.interfaces.agent import AgentHistoryEntry, IAgentState
+from codeact.interfaces.execution import ExecutionResult, IExecutionEnvironment
+from codeact.interfaces.llm import ILLMOutputParser, ILLMProvider, ParsedLLMOutput
+from codeact.interfaces.research import IResearchEnvironment, ResearchResult, WebPage
 
 __all__ = [
-    "IAgentState",
     "AgentHistoryEntry",
-    "ILLMProvider",
-    "ILLMOutputParser",
-    "ParsedLLMOutput",
-    "IExecutionEnvironment",
     "ExecutionResult",
+    "IAgentState",
+    "IExecutionEnvironment",
+    "ILLMOutputParser",
+    "ILLMProvider",
+    "IResearchEnvironment",
+    "ParsedLLMOutput",
+    "ResearchResult",
+    "WebPage",
 ]
